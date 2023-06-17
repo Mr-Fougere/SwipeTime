@@ -57,14 +57,17 @@
         func selectDifficultyActions()->[SwipeAction]{
             let swipeActionRight = SwipeAction(type: .other, image: "easy", text: "easy") {
                 AppState.shared.difficulty = .easy
+                AppState.shared.userState = .generatingDungeon
             }
             
             let swipeActionLeft = SwipeAction(type: .other, image: "hard", text: "hard") {
                 AppState.shared.difficulty = .hard
+                AppState.shared.userState = .generatingDungeon
             }
                 
             let swipeActionUp = SwipeAction(type: .other, image: "medium", text: "medium") {
                 AppState.shared.difficulty = .medium
+                AppState.shared.userState = .generatingDungeon
             }
             
             let swipeActionDown = SwipeAction(type: .other, image: "back", text: "back") {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAB031582A39929400A5D0B9 /* SwipeLogicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */; };
-		FAB0315A2A39929400A5D0B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031592A39929400A5D0B9 /* ContentView.swift */; };
+		FAB0315A2A39929400A5D0B9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031592A39929400A5D0B9 /* MenuView.swift */; };
 		FAB0315C2A39929700A5D0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0315B2A39929700A5D0B9 /* Assets.xcassets */; };
 		FAB0315F2A39929700A5D0B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0315E2A39929700A5D0B9 /* Preview Assets.xcassets */; };
 		FAB0316A2A39929700A5D0B9 /* SwipeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031692A39929700A5D0B9 /* SwipeLogicTests.swift */; };
@@ -20,6 +20,9 @@
 		FAB031A32A39EB7800A5D0B9 /* SwiperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A22A39EB7800A5D0B9 /* SwiperView.swift */; };
 		FAB031A52A3A406D00A5D0B9 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A42A3A406D00A5D0B9 /* GlobalVariables.swift */; };
 		FAB031A72A3A42EC00A5D0B9 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A62A3A42EC00A5D0B9 /* MenuActions.swift */; };
+		FAB031A92A3E4FA400A5D0B9 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */; };
+		FAB031AB2A3E4FC100A5D0B9 /* GeneratingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */; };
+		FAB031AF2A3E561900A5D0B9 /* DungeonMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,7 @@
 /* Begin PBXFileReference section */
 		FAB031542A39929400A5D0B9 /* SwipeLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeLogicApp.swift; sourceTree = "<group>"; };
-		FAB031592A39929400A5D0B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAB031592A39929400A5D0B9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FAB0315B2A39929700A5D0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0315E2A39929700A5D0B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAB031602A39929700A5D0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		FAB031A22A39EB7800A5D0B9 /* SwiperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperView.swift; sourceTree = "<group>"; };
 		FAB031A42A3A406D00A5D0B9 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		FAB031A62A3A42EC00A5D0B9 /* MenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
+		FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratingScreenView.swift; sourceTree = "<group>"; };
+		FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DungeonMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,6 @@
 				FAB0318A2A39A02F00A5D0B9 /* UI */,
 				FAB031832A39933600A5D0B9 /* Services */,
 				FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */,
-				FAB031592A39929400A5D0B9 /* ContentView.swift */,
 				FAB0315B2A39929700A5D0B9 /* Assets.xcassets */,
 				FAB031602A39929700A5D0B9 /* Info.plist */,
 				FAB0315D2A39929700A5D0B9 /* Preview Content */,
@@ -159,9 +164,13 @@
 		FAB0318A2A39A02F00A5D0B9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FAB031592A39929400A5D0B9 /* MenuView.swift */,
 				FAB031862A3998B700A5D0B9 /* SwipePadView.swift */,
 				FAB031A02A39BE3F00A5D0B9 /* SwipeActionView.swift */,
 				FAB031A22A39EB7800A5D0B9 /* SwiperView.swift */,
+				FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */,
+				FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */,
+				FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -304,12 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB0315A2A39929400A5D0B9 /* ContentView.swift in Sources */,
+				FAB031AB2A3E4FC100A5D0B9 /* GeneratingScreenView.swift in Sources */,
+				FAB031A92A3E4FA400A5D0B9 /* SplashScreenView.swift in Sources */,
+				FAB0315A2A39929400A5D0B9 /* MenuView.swift in Sources */,
 				FAB031872A3998B700A5D0B9 /* SwipePadView.swift in Sources */,
 				FAB031852A39935600A5D0B9 /* SwipePad.swift in Sources */,
 				FAB031A32A39EB7800A5D0B9 /* SwiperView.swift in Sources */,
 				FAB031582A39929400A5D0B9 /* SwipeLogicApp.swift in Sources */,
 				FAB031A52A3A406D00A5D0B9 /* GlobalVariables.swift in Sources */,
+				FAB031AF2A3E561900A5D0B9 /* DungeonMapView.swift in Sources */,
 				FAB0318E2A39AD9F00A5D0B9 /* SwipeAction.swift in Sources */,
 				FAB031A72A3A42EC00A5D0B9 /* MenuActions.swift in Sources */,
 				FAB031A12A39BE3F00A5D0B9 /* SwipeActionView.swift in Sources */,

@@ -23,7 +23,7 @@ struct SwipePadContainerView: UIViewRepresentable {
 }
 
 
-struct ContentView: View {
+struct MenuView: View {
 
     @ObservedObject var appState = AppState.shared
         
@@ -53,8 +53,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MenuView()
     }
 }

@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct SwipeLogicApp: App {
+    
+    @ObservedObject var appState = AppState.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch appState.userState {
+            case .splashScreen:
+                SplashScreenView()
+            case .inMenu,.selectDifficulty,.selectOption:
+                MenuView()
+            case .generatingDungeon:
+                GeneratinScreenView()
+            case .onDungeonMap:
+                DungeonMapView()
+            default:
+                EmptyView()
+            }
         }
     }
 }
