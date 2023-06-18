@@ -40,7 +40,7 @@ struct SwiperView: View {
 
 struct SwiperView_Preview: PreviewProvider {
     static var previews: some View {
-        let sampleSwipeAction1 = SwipeAction(type: .other, image: "none", text: "missing"){ print("missing")}
+        let sampleSwipeAction1 = SwipeAction(type: .other, image: "none", text: "missing"){ _ in  print("missing")}
         let sampleSwipePad = SwipePad(rightAction: sampleSwipeAction1, leftAction: sampleSwipeAction1, upAction: sampleSwipeAction1, downAction: sampleSwipeAction1)
         SwiperView(swipePad: sampleSwipePad)
     }

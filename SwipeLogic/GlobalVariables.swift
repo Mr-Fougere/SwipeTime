@@ -43,7 +43,8 @@ class AppState: ObservableObject {
     
     @Published var userState: UserState = .splashScreen
     @Published var difficulty: Difficulty = .not_selected
-    @Published var language: Language = .french
+    @Published var language: Language = .english
+    @Published var adventure: Adventure?
 
 }
 

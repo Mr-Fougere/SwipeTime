@@ -27,7 +27,11 @@ class SwipePad {
     
     func callAction(for direction: SwipeDirection) {
             let swipeAction = getAction(for: direction)
-            swipeAction.performAction()
+            if AppState.shared.userState == .inBattle {
+                swipeAction.performAction(param: 1)
+            }else{
+                swipeAction.performAction(param: 1)
+            }
        }
     
     func initDirection(){

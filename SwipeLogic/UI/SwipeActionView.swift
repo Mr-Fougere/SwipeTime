@@ -38,7 +38,7 @@
     
     struct SwipeActionView_Previews: PreviewProvider {
         static var previews: some View {
-            let sampleSwipeAction = SwipeAction(type: .other, image: "none", text: "missing"){ print("missing")}
+            let sampleSwipeAction = SwipeAction(type: .other, image: "none", text: "missing"){param in  print("missing")}
             SwipeActionView(swipeAction: sampleSwipeAction, geometryWidth: 10.0,geometryHeight: 10.0)
         }
     }

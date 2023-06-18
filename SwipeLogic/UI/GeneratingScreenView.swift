@@ -10,10 +10,11 @@ import SwiftUI
 struct GeneratinScreenView: View {
     var body: some View {
         VStack{
-            Color(.green)
+            Color(.systemIndigo)
         }.onAppear {
+            AppState.shared.adventure = AdventureGenerator().perform()
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                AppState.shared.userState = .onDungeonMap
+                AppState.shared.userState = .inBattle
             }
         }
     }

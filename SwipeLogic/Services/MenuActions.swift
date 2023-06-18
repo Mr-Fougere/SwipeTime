@@ -36,62 +36,62 @@
         }
         
         func inMenuAction()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "soon", text: "soon") {
+            let swipeActionRight = SwipeAction(type: .other, image: "soon", text: "soon") { param in
                 print("Right action performed!")
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "soon_2", text: "soon") {
+            let swipeActionLeft = SwipeAction(type: .other, image: "soon_2", text: "soon") {param in
                 print("Left action performed!")
             }
                 
-            let swipeActionUp = SwipeAction(type: .other, image: "new_adventure", text: "new adventure") {
+            let swipeActionUp = SwipeAction(type: .other, image: "new_adventure", text: "new adventure") {param in
                 AppState.shared.userState = .selectDifficulty
             }
             
-            let swipeActionDown = SwipeAction(type: .other, image: "options", text: "options") {
+            let swipeActionDown = SwipeAction(type: .other, image: "options", text: "options") {param in
                 AppState.shared.userState = .selectOption
             }
             return [swipeActionRight,swipeActionLeft,swipeActionUp,swipeActionDown]
         }
         
         func selectDifficultyActions()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "easy", text: "easy") {
+            let swipeActionRight = SwipeAction(type: .other, image: "easy", text: "easy") {param in
                 AppState.shared.difficulty = .easy
                 AppState.shared.userState = .generatingDungeon
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "hard", text: "hard") {
+            let swipeActionLeft = SwipeAction(type: .other, image: "hard", text: "hard") {param in
                 AppState.shared.difficulty = .hard
                 AppState.shared.userState = .generatingDungeon
             }
                 
-            let swipeActionUp = SwipeAction(type: .other, image: "medium", text: "medium") {
+            let swipeActionUp = SwipeAction(type: .other, image: "medium", text: "medium") {param in
                 AppState.shared.difficulty = .medium
                 AppState.shared.userState = .generatingDungeon
             }
             
-            let swipeActionDown = SwipeAction(type: .other, image: "back", text: "back") {
+            let swipeActionDown = SwipeAction(type: .other, image: "back", text: "back") {param in
                 AppState.shared.userState = .inMenu
             }
             return [swipeActionRight,swipeActionLeft,swipeActionUp,swipeActionDown]
         }
         
         func selectOptionsAction()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "flag_fr", text: "french") {
+            let swipeActionRight = SwipeAction(type: .other, image: "flag_fr", text: "french") {param in
                 AppState.shared.language = .french
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "flag_jp", text: "japanese") {
+            let swipeActionLeft = SwipeAction(type: .other, image: "flag_jp", text: "japanese") {param in
                 AppState.shared.language = .japanese
                 AppState.shared.userState = .inMenu
             }
                 
-            let swipeActionUp = SwipeAction(type: .other, image: "back", text: "back") {
+            let swipeActionUp = SwipeAction(type: .other, image: "back", text: "back") {param in
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionDown = SwipeAction(type: .other, image: "flag_uk", text: "english") {
+            let swipeActionDown = SwipeAction(type: .other, image: "flag_uk", text: "english") {param in 
                 AppState.shared.language = .english
                 AppState.shared.userState = .inMenu
             }

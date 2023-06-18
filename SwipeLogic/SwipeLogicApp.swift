@@ -23,6 +23,10 @@ struct SwipeLogicApp: App {
                 GeneratinScreenView()
             case .onDungeonMap:
                 DungeonMapView()
+            case .inBattle,.inBoss:
+                BattleView()
+            case .inMarket:
+                MarketView()
             default:
                 EmptyView()
             }

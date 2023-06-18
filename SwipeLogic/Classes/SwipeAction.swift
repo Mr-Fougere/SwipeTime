@@ -18,10 +18,10 @@ class SwipeAction {
     let type: ActionType
     let image: String
     let text: String
-    let action: () -> Void
+    let action: (Int) -> Void
     var direction: SwipeDirection?
     
-    init(type: ActionType, image: String, text: String, action: @escaping () -> Void) {
+    init(type: ActionType, image: String, text: String, action: @escaping (Int) -> Void) {
         self.type = type
         self.image = image
         self.text = text
@@ -32,8 +32,8 @@ class SwipeAction {
         self.direction = direction
     }
     
-    func performAction() {
-        action()
+    func performAction(param: Int) {
+        action(param)
     }
     
     func isHorizontal()-> Bool{
