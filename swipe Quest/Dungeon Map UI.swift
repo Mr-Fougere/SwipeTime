@@ -11,7 +11,12 @@ struct DungeonMapView: View {
                         ForEach(0..<10, id: \.self) { y in
                             let cell = donjonMap.getCell(at: Coordinate(x: x, y: y))!
                             if donjonMap.path.contains(where: { $0.coordinate == cell.coordinate }) {
-                                Image(cell.type.description).background(Color.green)
+                                ZStack {
+                                    Image(cell.type.description).background(Color.red)
+                                    if cell.type == .depart {
+                                        Image("joueur")
+                                    }
+                                }
                             }
                         }
                     }
