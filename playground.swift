@@ -91,12 +91,10 @@ func generateRandomMovementPattern() -> (String, [Float]) {
         durations.append(randomDuration)
     }
 
-    return (movementPattern, durations)
+    let movementPatternCount = movementPattern.count
+    let trimmedDurations = durations.prefix(movementPatternCount)
+    return (movementPattern, Array(trimmedDurations))
 }
-
-
-
-
 
 func generateRandomName() -> String {
     let nouns = ["BadTiro", "DancingSnail", "Dogi", "MicroWaveBot", "MisterHeart", "MouseThief", "Pingi", "RedDevil", "SandWishDevil", "YelloDevil"]
@@ -114,8 +112,11 @@ let difficulty = Difficulty.moyen
 if let enemy = generateEnemy(difficulty: difficulty) {
     // Utilisez l'objet enemy généré
     print("Un ennemi nommé \(enemy.name) a été créé avec une santé de \(enemy.health) et inflige \(enemy.damage) dégâts.")
-    print("Pattern de mouvement : \(enemy.movementPattern)")
-    print("Durées : \(enemy.movementDurations)")
+    
+    for i in 0..<enemy.movementPattern.count {
+        print("Pattern de mouvement \(i+1): \(enemy.movementPattern[i])")
+        print("Durée : \(enemy.movementDurations[i])")
+    }
 
     while hero.health > 0 && enemy.health > 0 {
         print("Le héros \(hero.name) attaque l'ennemi.")
@@ -139,6 +140,7 @@ if let enemy = generateEnemy(difficulty: difficulty) {
 } else {
     print("Niveau de difficulté invalide.")
 }
+
 
 
 
