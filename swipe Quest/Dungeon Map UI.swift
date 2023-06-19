@@ -11,7 +11,25 @@ struct DungeonMapView: View {
 
     var body: some View {
         ZStack {
+            // Adding your background image to the ZStack
+            Image("fireKingdom 1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all) // This will allow your image to fill the whole screen
+
             VStack {
+                // Adding the title
+                ZStack {
+                                    Image("title_parch 5")
+                        .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .scaleEffect(0.5)
+
+                    Text("Fire Kingdom")
+                        .font(.largeTitle)
+                        .italic() // This will make the text italic
+                        .padding()                                }
+
                 HStack {
                     ForEach(0..<10, id: \.self) { x in
                         VStack {
@@ -19,7 +37,7 @@ struct DungeonMapView: View {
                                 let cell = donjonMap.getCell(at: Coordinate(x: x, y: y))!
                                 if donjonMap.path.contains(where: { $0.coordinate == cell.coordinate }) {
                                     ZStack {
-                                        Image(cell.type.description).background(Color.red)
+                                        Image(cell.type.description)
                                         if cell.coordinate == donjonMap.player.coordinate {
                                             playerImg
                                         }
