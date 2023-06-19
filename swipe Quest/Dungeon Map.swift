@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 import SwiftUI
 
 struct Coordinate: Hashable {
@@ -68,8 +67,8 @@ class Cell: Equatable, Hashable {
 }
 
 
-class Player {
-    var coordinate: Coordinate
+class Player: ObservableObject {
+    @Published var coordinate: Coordinate
 
     init(coordinate: Coordinate) {
         self.coordinate = coordinate
@@ -155,5 +154,52 @@ class DonjonMap: ObservableObject {
     
     func placePlayerAtStart() {
         player.coordinate = Coordinate(x: 0, y: 0)
+    }
+    
+    func movePlayerUp() {
+        let oldCoordinate = player.coordinate
+        print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
+        let newCoordinate = Coordinate(x: player.coordinate.x, y: player.coordinate.y - 1)
+        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+            player.coordinate = newCoordinate
+            print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+        }
+        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
+        
+    }
+    // Fonctions movePlayerDown(), movePlayerLeft() et movePlayerRight() doivent également inclure self.objectWillChange.send()
+
+    
+    func movePlayerDown() {
+        let oldCoordinate = player.coordinate
+        print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
+        let newCoordinate = Coordinate(x: player.coordinate.x, y: player.coordinate.y + 1)
+        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+            player.coordinate = newCoordinate
+            print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+        }
+        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
+    }
+    
+    func movePlayerLeft() {
+        let oldCoordinate = player.coordinate
+        print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
+        let newCoordinate = Coordinate(x: player.coordinate.x - 1, y: player.coordinate.y)
+        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+            player.coordinate = newCoordinate
+            print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+        }
+        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement// Ajouter cet appel pour signaler le changement
+    }
+    
+    func movePlayerRight() {
+        let oldCoordinate = player.coordinate
+        print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
+        let newCoordinate = Coordinate(x: player.coordinate.x + 1, y: player.coordinate.y)
+        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+            player.coordinate = newCoordinate
+            print("New position: (\(player.coordinate.x), \(player.coordinate.y))")
+        }
+        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
     }
 }
