@@ -45,6 +45,7 @@ class AppState: ObservableObject {
     @Published var difficulty: Difficulty = .not_selected
     @Published var language: Language = .english
     @Published var adventure: Adventure?
+    @Published var battle: Battle?
 
 }
 

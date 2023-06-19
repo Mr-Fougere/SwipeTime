@@ -41,7 +41,7 @@ class SwipeEffect {
     
     
     func applyEffect(mulitplier: Int){
-        
+
     }
     
 }

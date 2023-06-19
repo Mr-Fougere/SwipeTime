@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+
+
 
 struct CharacterView: View {
     let character: Character
@@ -15,13 +16,25 @@ struct CharacterView: View {
         self.character = character;
     }
     
+    
     var body: some View {
-        VStack{
-            ZStack{
-                HealthBar(maxHP: character.healthPoints, currentHP: character.currentHealthPoints, isUser: type(of: character) == Hero.Type.self)
-            }
-            AnimatedImage(name: character.name)
-        }.frame(width: UIScreen.main.bounds.width * 0.5,alignment: .center)
+        GeometryReader { geometry in
+                    VStack {
+                        HealthBar(maxHP: character.healthPoints, currentHP: character.currentHealthPoints, isUser: type(of: character) == type(of: Basics().basicHero()))
+                            .frame(height: geometry.size.height * 0.1)
+                            .padding(.horizontal, geometry.size.width * 0.20)
+                        ZStack(alignment: .bottom){
+                            ShadowView(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 0.1)
+                            Image(character.name)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.horizontal, geometry.size.width * 0.20)
+                                .frame(height: geometry.size.height * 0.7)
+                        }
+                        
+                    }
+                    .frame(maxHeight: .infinity, alignment: .bottom) 
+                }
     }
 }
 

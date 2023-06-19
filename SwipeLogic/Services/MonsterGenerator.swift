@@ -63,11 +63,11 @@ class MonsterGenerator{
             durations.append(randomDuration)
         }
 
-        return (movementPattern, durations)
+        return (movementPattern, durations + durations)
     }
     
     func randomName() -> String {
-        let nouns = ["Pinguin", "Skeleton"]
+        let nouns = ["Penguin"]
 
         let randomNounIndex = Int.random(in: 0..<nouns.count)
 
