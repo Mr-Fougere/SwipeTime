@@ -40,10 +40,6 @@ struct MenuView: View {
                     .clipped()
                 
                 VStack(spacing: 0) {
-                    Image("swipe_time_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .clipped().frame(width: UIScreen.main.bounds.width)
                     Spacer()
                     SwiperView(swipePad: swipePad).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
                 }

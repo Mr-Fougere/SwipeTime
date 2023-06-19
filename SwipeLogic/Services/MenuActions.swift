@@ -36,15 +36,15 @@
         }
         
         func inMenuAction()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "soon", text: "soon") { param in
+            let swipeActionRight = SwipeAction(type: .other, image: "soon1", text: "soon") { param in
                 print("Right action performed!")
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "soon_2", text: "soon") {param in
+            let swipeActionLeft = SwipeAction(type: .other, image: "soon2", text: "soon") {param in
                 print("Left action performed!")
             }
                 
-            let swipeActionUp = SwipeAction(type: .other, image: "new_adventure", text: "new adventure") {param in
+            let swipeActionUp = SwipeAction(type: .other, image: "newAdventure", text: "new adventure") {param in
                 AppState.shared.userState = .selectDifficulty
             }
             
@@ -77,12 +77,12 @@
         }
         
         func selectOptionsAction()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "flag_fr", text: "french") {param in
+            let swipeActionRight = SwipeAction(type: .other, image: "flagFR", text: "french") {param in
                 AppState.shared.language = .french
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "flag_jp", text: "japanese") {param in
+            let swipeActionLeft = SwipeAction(type: .other, image: "flagJP", text: "japanese") {param in
                 AppState.shared.language = .japanese
                 AppState.shared.userState = .inMenu
             }
@@ -91,7 +91,7 @@
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionDown = SwipeAction(type: .other, image: "flag_uk", text: "english") {param in 
+            let swipeActionDown = SwipeAction(type: .other, image: "flagEN", text: "english") {param in
                 AppState.shared.language = .english
                 AppState.shared.userState = .inMenu
             }

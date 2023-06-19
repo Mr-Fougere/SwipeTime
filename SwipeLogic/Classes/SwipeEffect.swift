@@ -26,13 +26,15 @@ enum CharacterStat{
     case one
 }
 
-class SwipeEffect {
+class SwipeEffect:Hashable, Equatable {
     let target: Target
     let affectedStat: CharacterStat
     let referenceStat: CharacterStat
     let value: Int
-    
-    init(target: Target, affectedStat: CharacterStat,referenceStat: CharacterStat, value: Int) {
+    let type: ActionType
+
+    init(target: Target,type: ActionType, affectedStat: CharacterStat,referenceStat: CharacterStat, value: Int) {
+        self.type = type
         self.target = target
         self.affectedStat = affectedStat
         self.referenceStat = referenceStat
@@ -40,8 +42,29 @@ class SwipeEffect {
     }
     
     
-    func applyEffect(mulitplier: Int){
-
+    func updateAction(mulitplier: Int,battle: Battle){
+        if let lastAction = battle.hero.timingBar?.actions.first {
+            print(lastAction.bindingKey)
+            let result = battle.hero.timingBar?.getTimingResult(time: lastAction.timing)
+            lastAction.result = result!
+            lastAction.swipeEffect = self
+        }
     }
+    
+    static func == (lhs: SwipeEffect, rhs: SwipeEffect) -> Bool {
+            return lhs.target == rhs.target &&
+                lhs.affectedStat == rhs.affectedStat &&
+                lhs.referenceStat == rhs.referenceStat &&
+                lhs.value == rhs.value
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(target)
+            hasher.combine(affectedStat)
+            hasher.combine(referenceStat)
+            hasher.combine(value)
+        }
+    
+    
     
 }

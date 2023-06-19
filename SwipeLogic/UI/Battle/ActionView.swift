@@ -36,7 +36,7 @@ struct ActionView: View {
                             .frame(width: 45, height: 45)
                             .foregroundColor(.white)
                         
-                        Image(currentAction.swipeAction!.type.rawValue)
+                        Image((currentAction.swipeEffect?.type.rawValue)!)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 40, height: 40)

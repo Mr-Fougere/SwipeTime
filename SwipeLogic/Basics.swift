@@ -10,21 +10,21 @@ import Foundation
 class Basics {
     
     
-    public let basicAtackEffect: SwipeEffect = SwipeEffect(target: .opponent, affectedStat: .healthPointss, referenceStat: .attack, value: 1)
+    public let basicAtackEffect: SwipeEffect = SwipeEffect(target: .opponent,type: .attack, affectedStat: .healthPointss, referenceStat: .attack, value: -1)
     
-    public let basicDefenseEffect: SwipeEffect = SwipeEffect(target: .you, affectedStat: .protection, referenceStat: .defense, value: 1)
+    public let basicDefenseEffect: SwipeEffect = SwipeEffect(target: .you,type: .defense, affectedStat: .protection, referenceStat: .defense, value: +1)
     
-    public let enemySpecialEffect: SwipeEffect = SwipeEffect(target: .opponent, affectedStat: .defense, referenceStat: .one, value: 1)
+    public let enemySpecialEffect: SwipeEffect = SwipeEffect(target: .opponent,type: .special, affectedStat: .defense, referenceStat: .one, value: -1)
     
-    public lazy var basicSwipeAttack: SwipeAction = SwipeAction(type: .attack, image: "basic_sword", text: "Deal 1x attack") { param in self.basicAtackEffect.applyEffect(mulitplier: param)
+    public lazy var basicSwipeAttack: SwipeAction = SwipeAction(type: .attack, image: "basic_sword", text: "Deal 1x attack") { param in self.basicAtackEffect.updateAction(mulitplier: param, battle: AppState.shared.battle!)
     }
 
     public lazy var basicSwipeDefense: SwipeAction = SwipeAction(type: .defense, image: "basic_defense", text: "Protect 5 damage") {
-        param in self.basicDefenseEffect.applyEffect(mulitplier: param)
+        param in self.basicDefenseEffect.updateAction(mulitplier: param,battle: AppState.shared.battle!)
     }
     
     public lazy var enemySwipeEffect: SwipeAction = SwipeAction(type: .special, image: "reduce_damage", text: "Reduce opponent atk by 1") {
-        param in self.enemySpecialEffect.applyEffect(mulitplier: param)
+        param in self.enemySpecialEffect.updateAction(mulitplier: param,battle: AppState.shared.battle!)
     }
 
     func basicHeroSwipeActions() -> [SwipeAction]{

@@ -46,10 +46,11 @@ struct BattleView: View {
                             .scaledToFill()
                             .frame(width: geometry.size.width, height: geometry.size.height)
                         VStack{
+                            TitleView(text: "Battle", type: 3).frame(height: geometry.size.height * 0.15)
                             HStack() {
                                 CharacterView(character: hero)
                                 CharacterView(character: monster)
-                            }.frame(height: geometry.size.height * 0.8)
+                            }.frame(height: geometry.size.height * 0.6)
                             TimingBarView(battle: battle).frame(height: geometry.size.height * 0.2)
                         }
                     }

@@ -38,8 +38,7 @@ class MonsterGenerator{
         }
 
         let (movementPattern, movementDurations) = generateRandomMovementPattern()
-
-        return  Monster(name: randomName(), healthPoints: enemyHealth, attack: enemyDamage, defense: enemyDefense, protection: 0, timingBar: Basics().basicTimingBar(), swipeActions: Basics().basicMonsterSwipeActions(), patternMoves: movementPattern, intervalMoves: movementDurations )
+        return  Monster(name: randomName(), healthPoints: enemyHealth, attack: enemyDamage, defense: enemyDefense, protection: 0, timingBar: Basics().basicTimingBar(), swipeEffects: [Basics().basicAtackEffect,Basics().basicDefenseEffect,Basics().enemySpecialEffect], patternMoves: movementPattern, intervalMoves: movementDurations )
     }
     
     func randomName(){
@@ -58,12 +57,11 @@ class MonsterGenerator{
             
             let randomDurationIndex = Int.random(in: 0..<possibleDurations.count)
             let randomDuration = possibleDurations[randomDurationIndex]
-            
+        
             movementPattern += randomMove
             durations.append(randomDuration)
         }
-
-        return (movementPattern, durations + durations)
+        return (movementPattern, durations)
     }
     
     func randomName() -> String {
