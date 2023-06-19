@@ -25,20 +25,31 @@ struct TimingBarView: View {
         GeometryReader { geometry in
                     ZStack(alignment: Alignment.center) { // Utiliser une VStack pour centrer l'interface utilisateur verticalement
                         HStack(spacing: 0) {
-                            Color(colorUI)
-                                .frame(height: geometry.size.height * 0.5)
-                                .opacity(0.5)
+                            VStack{
+                                Text(heroTimingBar.lastTiming.rawValue)
+
+                                Color(colorUI)
+                                    .frame(height: geometry.size.height * 0.25)
+                                    .opacity(0.5)
+                                    .padding(.bottom,geometry.size.height*0.25)
+                            }
+                            
                             
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color(colorUI), lineWidth: 5)
-                                .frame(width: geometry.size.height, height: geometry.size.height)
+                                .frame(width: geometry.size.height*0.5, height: geometry.size.height*0.5)
                             
-                            Color(colorUI)
-                                .frame(height: geometry.size.height * 0.5)
-                                .opacity(0.5)
+                            VStack{
+                                Text(monsterTimingbar.lastTiming.rawValue)
+                                Color(colorUI)
+                                    .frame(height: geometry.size.height * 0.25)
+                                    .opacity(0.5)
+                                    .padding(.bottom,geometry.size.height*0.25)
+
+                            }
+
                         }
-                        Text(heroTimingBar.lastTiming.rawValue)
-                        Text(monsterTimingbar.lastTiming.rawValue)
+                        
                             ForEach(monsterTimingbar.actions, id: \.self) { action in
                                 ActionView(action: action)
                             }

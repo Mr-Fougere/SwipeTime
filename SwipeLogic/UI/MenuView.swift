@@ -33,7 +33,7 @@ struct MenuView: View {
 
     var body: some View {
             ZStack{
-                Image("bg_menu")
+                Image("Menu")
                     .resizable()
                     .scaledToFill()
                     .opacity(0.7)
@@ -50,6 +50,7 @@ struct MenuView: View {
                 .background(Color.clear)
                 .edgesIgnoringSafeArea(.top)
             }
+
     }
 }
 

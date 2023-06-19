@@ -38,7 +38,7 @@ class EffectApplier{
             heroAction.result = .miss
         }
         monsterAction.result = randomTimingResult()
-        
+        battle.hero.currentHealthPoints -= 10
         
         removeActionApplied()
     }

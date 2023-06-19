@@ -10,10 +10,12 @@ import SwiftUI
 
 
 struct CharacterView: View {
-    let character: Character
+    
+    @StateObject private var character: Character
+
     
     init(character: Character) {
-        self.character = character;
+        _character = StateObject(wrappedValue: character);
     }
     
     

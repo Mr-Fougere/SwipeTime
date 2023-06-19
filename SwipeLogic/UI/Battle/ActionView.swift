@@ -23,7 +23,8 @@ struct ActionView: View {
                             .foregroundColor(.white)
 
                         Circle()
-                            .stroke(Color.green, lineWidth: 2) // Définir la couleur et l'épaisseur de la bordure
+                            .stroke(Color.green, lineWidth: 2)
+                            .frame(width: 45, height: 45)
                     }
                     .position(x: calculatePositionX(user: true), y: geometry.size.height * 0.5)
                     .onChange(of: currentAction.timing) { newValue in
@@ -40,7 +41,9 @@ struct ActionView: View {
                                 .scaledToFit()
                                 .frame(width: 40, height: 40)
                         Circle()
-                            .stroke(Color.red, lineWidth: 2) // Définir la couleur et l'épaisseur de la bordure
+                            .stroke(Color.red, lineWidth: 2)
+                            .frame(width: 45, height: 45)
+
                     }
                     .position(x: calculatePositionX(user: false), y: geometry.size.height * 0.5)
                     .onChange(of: currentAction.timing) { newValue in

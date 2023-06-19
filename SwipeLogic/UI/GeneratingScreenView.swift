@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct GeneratinScreenView: View {
+    
+    @State var progressValue: Float = 0.0
+
     var body: some View {
-        VStack{
-            Color(.systemIndigo)
-        }.onAppear {
-            AppState.shared.adventure = AdventureGenerator().perform()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                AppState.shared.userState = .inBattle
-            }
+        ZStack{
+            Image("Generation")
+                .resizable()
+                .scaledToFit()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .ignoresSafeArea(.all)
+            ProgressBar(progress: self.$progressValue)
+                .frame(width: UIScreen.main.bounds.width - 40, height: 20)
+                .offset(y: 350)
+                .padding(20.0).onAppear(){
+                    self.progressValue = 1.0
+                }.onAppear {
+                    AppState.shared.adventure = AdventureGenerator().perform()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                        AppState.shared.userState = .inBattle
+                    }
+                }
         }
     }
 }

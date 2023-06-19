@@ -13,26 +13,28 @@ struct BattleView: View {
         return BattleActions(actions: adventure.hero.swipeActions).create()
     }
 
-    @StateObject var battle: Battle
-
-    init() {
+        @StateObject var battle: Battle
+        @StateObject var hero: Hero
+        @StateObject var monster: Monster
+        
+        init() {
             if let existingBattle = AppState.shared.battle {
                 _battle = StateObject(wrappedValue: existingBattle)
+                let hero = existingBattle.hero
+                let monster = existingBattle.monsters[0]
+                _hero = StateObject(wrappedValue: hero)
+                _monster = StateObject(wrappedValue: monster)
             } else {
                 let newBattle: Battle = BattleGenerator().perform()
                 _battle = StateObject(wrappedValue: newBattle)
                 AppState.shared.battle = newBattle
+                let hero = newBattle.hero
+                let monster = newBattle.monsters[0]
+                _hero = StateObject(wrappedValue: hero)
+                _monster = StateObject(wrappedValue: monster)
             }
         }
     
-    var hero: Character {
-           return battle.hero
-       }
-       
-   var monster: Character {
-       return battle.monsters[0]
-   }
-
     var body: some View {
         ZStack {
             Color(adventure.currentDungeon.color)
@@ -45,10 +47,10 @@ struct BattleView: View {
                             .frame(width: geometry.size.width, height: geometry.size.height)
                         VStack{
                             HStack() {
-                                CharacterView(character: self.hero)
-                                CharacterView(character: self.monster)
+                                CharacterView(character: hero)
+                                CharacterView(character: monster)
                             }.frame(height: geometry.size.height * 0.8)
-                            TimingBarView(battle: self.battle).frame(height: geometry.size.height * 0.1)
+                            TimingBarView(battle: battle).frame(height: geometry.size.height * 0.2)
                         }
                     }
                 }

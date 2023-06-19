@@ -9,13 +9,12 @@ import SwiftUI
 
 struct HealthBar: View {
     
-    let percentage: Float
+    var maxHP: Int
+    var currentHP: Int
     let isUser: Bool
     
-    
-    init(maxHP: Int,currentHP: Int,isUser : Bool) {
-        self.percentage = Float(currentHP / maxHP);
-        self.isUser = isUser
+    var percentage: Float {
+        return Float(currentHP) / Float(maxHP)
     }
     
     var body: some View {
@@ -23,15 +22,16 @@ struct HealthBar: View {
             ZStack(alignment: .leading) {
                 Rectangle()
                     .foregroundColor(isUser ? .green : .red)
-                    .frame(width: geometry.size.width * CGFloat(percentage), height: 10)
-                    .cornerRadius(5)
+                    .frame(width: geometry.size.width * CGFloat(percentage), height: 15)
+                    .cornerRadius(10)
+                
                 Rectangle()
                     .foregroundColor(.clear)
                     .opacity(0.3)
-                    .frame(width: geometry.size.width, height: 10)
-                    .cornerRadius(5)
+                    .frame(width: geometry.size.width, height: 15)
+                    .cornerRadius(10)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5)
+                        RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.white, lineWidth: 3)
                     )
             }
