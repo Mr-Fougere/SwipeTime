@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		BE842E892A38C4EA00417B66 /* Swipe_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE842E882A38C4EA00417B66 /* Swipe_TimeApp.swift */; };
-		BE842E8B2A38C4EA00417B66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE842E8A2A38C4EA00417B66 /* ContentView.swift */; };
 		BE842E8D2A38C4EC00417B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE842E8C2A38C4EC00417B66 /* Assets.xcassets */; };
 		BE842E902A38C4EC00417B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE842E8F2A38C4EC00417B66 /* Preview Assets.xcassets */; };
 		BE842E9A2A38C4EC00417B66 /* Swipe_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE842E992A38C4EC00417B66 /* Swipe_TimeTests.swift */; };
 		BE842EA42A38C4EC00417B66 /* Swipe_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE842EA32A38C4EC00417B66 /* Swipe_TimeUITests.swift */; };
 		BE842EA62A38C4EC00417B66 /* Swipe_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE842EA52A38C4EC00417B66 /* Swipe_TimeUITestsLaunchTests.swift */; };
+		BEA20D012A40451D005A9122 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA20D002A40451D005A9122 /* SplashScreen.swift */; };
+		BEA20D032A404548005A9122 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA20D022A404548005A9122 /* ProgressBar.swift */; };
+		BEA20D052A404584005A9122 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA20D042A404584005A9122 /* ContentView1.swift */; };
+		BEA20D0D2A4052FA005A9122 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA20D092A40489C005A9122 /* ContentView2.swift */; };
+		BEA20D0E2A4052FC005A9122 /* SplashScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA20D072A404606005A9122 /* SplashScreen2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		BE842E852A38C4EA00417B66 /* Swipe Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipe Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE842E882A38C4EA00417B66 /* Swipe_TimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe_TimeApp.swift; sourceTree = "<group>"; };
-		BE842E8A2A38C4EA00417B66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE842E8C2A38C4EC00417B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE842E8F2A38C4EC00417B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE842E952A38C4EC00417B66 /* Swipe TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swipe TimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,11 @@
 		BE842E9F2A38C4EC00417B66 /* Swipe TimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swipe TimeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE842EA32A38C4EC00417B66 /* Swipe_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe_TimeUITests.swift; sourceTree = "<group>"; };
 		BE842EA52A38C4EC00417B66 /* Swipe_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEA20D002A40451D005A9122 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		BEA20D022A404548005A9122 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		BEA20D042A404584005A9122 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
+		BEA20D072A404606005A9122 /* SplashScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen2.swift; sourceTree = "<group>"; };
+		BEA20D092A40489C005A9122 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				BE842E882A38C4EA00417B66 /* Swipe_TimeApp.swift */,
-				BE842E8A2A38C4EA00417B66 /* ContentView.swift */,
+				BEA20D002A40451D005A9122 /* SplashScreen.swift */,
+				BEA20D072A404606005A9122 /* SplashScreen2.swift */,
+				BEA20D042A404584005A9122 /* ContentView1.swift */,
+				BEA20D092A40489C005A9122 /* ContentView2.swift */,
+				BEA20D022A404548005A9122 /* ProgressBar.swift */,
 				BE842E8C2A38C4EC00417B66 /* Assets.xcassets */,
 				BE842E8E2A38C4EC00417B66 /* Preview Content */,
 			);
@@ -257,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE842E8B2A38C4EA00417B66 /* ContentView.swift in Sources */,
+				BEA20D012A40451D005A9122 /* SplashScreen.swift in Sources */,
+				BEA20D032A404548005A9122 /* ProgressBar.swift in Sources */,
+				BEA20D052A404584005A9122 /* ContentView1.swift in Sources */,
+				BEA20D0D2A4052FA005A9122 /* ContentView2.swift in Sources */,
 				BE842E892A38C4EA00417B66 /* Swipe_TimeApp.swift in Sources */,
+				BEA20D0E2A4052FC005A9122 /* SplashScreen2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,8 @@ import SwiftUI
 struct Swipe_TimeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView1()
+            ContentView2()
         }
     }
 }
