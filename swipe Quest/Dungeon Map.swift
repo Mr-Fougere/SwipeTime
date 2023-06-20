@@ -59,10 +59,12 @@ class Cell: Equatable, Hashable {
     
     var coordinate: Coordinate
     var type: CellType
+    var clear: Bool // Indicates if the cell is clear for the player to move onto
 
-    init(coordinate: Coordinate, type: CellType) {
+    init(coordinate: Coordinate, type: CellType, clear: Bool) {
         self.coordinate = coordinate
         self.type = type
+        self.clear = clear
     }
 }
 
@@ -96,7 +98,7 @@ class DonjonMap: ObservableObject {
                     cellType = CellType.random
                 }
                 
-                row.append(Cell(coordinate: coordinate, type: cellType))
+                row.append(Cell(coordinate: coordinate, type: cellType, clear: false))
             }
             map.append(row)
         }
@@ -132,6 +134,7 @@ class DonjonMap: ObservableObject {
         while currentPos != end {
             let cell = getCell(at: currentPos)!
             cell.type = CellType.randomForPath
+            cell.clear = false // Set clear to true for the path cells
             path.append(cell) // add cell to path
             
             // randomly move right or up
@@ -149,6 +152,7 @@ class DonjonMap: ObservableObject {
         // set the end cell to be a random type too
         let endCell = getCell(at: end)!
         endCell.type = CellType.randomForPath
+        endCell.clear = false // Set clear to true for the end cell
         path.append(endCell) // add end cell to path
     }
     
@@ -160,21 +164,19 @@ class DonjonMap: ObservableObject {
         let oldCoordinate = player.coordinate
         print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
         let newCoordinate = Coordinate(x: player.coordinate.x, y: player.coordinate.y - 1)
-        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+        if let newCell = getCell(at: newCoordinate), newCell.clear {
             player.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
         }
         self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
         
     }
-    // Fonctions movePlayerDown(), movePlayerLeft() et movePlayerRight() doivent également inclure self.objectWillChange.send()
-
     
     func movePlayerDown() {
         let oldCoordinate = player.coordinate
         print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
         let newCoordinate = Coordinate(x: player.coordinate.x, y: player.coordinate.y + 1)
-        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+        if let newCell = getCell(at: newCoordinate), newCell.clear {
             player.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
         }
@@ -185,18 +187,18 @@ class DonjonMap: ObservableObject {
         let oldCoordinate = player.coordinate
         print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
         let newCoordinate = Coordinate(x: player.coordinate.x - 1, y: player.coordinate.y)
-        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+        if let newCell = getCell(at: newCoordinate), newCell.clear {
             player.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
         }
-        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement// Ajouter cet appel pour signaler le changement
+        self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
     }
     
     func movePlayerRight() {
         let oldCoordinate = player.coordinate
         print("Old position: (\(oldCoordinate.x), \(oldCoordinate.y))")
         let newCoordinate = Coordinate(x: player.coordinate.x + 1, y: player.coordinate.y)
-        if let newCell = getCell(at: newCoordinate), path.contains(newCell) {
+        if let newCell = getCell(at: newCoordinate), newCell.clear {
             player.coordinate = newCoordinate
             print("New position: (\(player.coordinate.x), \(player.coordinate.y))")
         }
