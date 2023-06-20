@@ -20,35 +20,41 @@ struct DungeonMapView: View {
             VStack {
                 // Adding the title
                 ZStack {
-                                    Image("title_parch 5")
+                    Image("title_parch 5")
                         .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .scaleEffect(0.5)
+                        .aspectRatio(contentMode: .fit)
+                        .scaleEffect(0.5)
 
                     Text("Fire Kingdom")
                         .font(.largeTitle)
-                        .italic() // This will make the text italic
-                        .padding()                                }
+                        .padding()
+                }
 
-                HStack {
-                    ForEach(0..<10, id: \.self) { x in
-                        VStack {
-                            ForEach(0..<10, id: \.self) { y in
-                                let cell = donjonMap.getCell(at: Coordinate(x: x, y: y))!
-                                if donjonMap.path.contains(where: { $0.coordinate == cell.coordinate }) {
-                                    ZStack {
-                                        Image(cell.type.description)
-                                        if cell.coordinate == donjonMap.player.coordinate {
-                                            playerImg
-                                        }
+                ForEach((0..<10).reversed(), id: \.self) { y in
+                    HStack {
+                        ForEach(0..<10, id: \.self) { x in
+                            let cell = donjonMap.getCell(at: Coordinate(x: x, y: y))!
+                            if donjonMap.path.contains(where: { $0.coordinate == cell.coordinate }) {
+                                ZStack {
+                                    Image(cell.type.description)
+                                    if cell.coordinate == donjonMap.player.coordinate {
+                                        playerImg
                                     }
                                 }
+                            }
+                            else{
+                                ZStack{
+                                    Image("nocell")
+                                }
+                                
                             }
                         }
                     }
                 }
+
                 Spacer()
             }
+
             VStack {
                 Spacer()
                 HStack {
