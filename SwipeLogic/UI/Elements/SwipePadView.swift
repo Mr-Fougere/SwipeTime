@@ -18,7 +18,7 @@ class SwipePadView: UIView {
             self.init(frame: newFrame)
             self.swipePad = swipePad
             addSwipeGestureRecognizers()
-            backgroundColor = .lightGray// Ajout de la couleur de fond grise
+            //backgroundColor = .lightGray// Ajout de la couleur de fond grise
         }
     
     private func addSwipeGestureRecognizers() {

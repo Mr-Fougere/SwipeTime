@@ -41,10 +41,9 @@ struct MenuView: View {
                 
                 VStack(spacing: 0) {
                     Spacer()
-                    SwiperView(swipePad: swipePad).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
+                    SwiperView(swipePad: swipePad).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4).padding(.bottom,40)
                 }
                 .background(Color.clear)
-                .edgesIgnoringSafeArea(.top)
             }
 
     }

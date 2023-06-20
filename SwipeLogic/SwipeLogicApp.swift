@@ -22,7 +22,7 @@ struct SwipeLogicApp: App {
             case .generatingDungeon:
                 GeneratinScreenView()
             case .onDungeonMap:
-                DungeonMapView()
+                DungeonView()
             case .inBattle,.inBoss:
                 BattleView()
             case .inMarket:

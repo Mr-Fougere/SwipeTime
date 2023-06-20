@@ -44,7 +44,6 @@ class SwipeEffect:Hashable, Equatable {
     
     func updateAction(mulitplier: Int,battle: Battle){
         if let lastAction = battle.hero.timingBar?.actions.first {
-            print(lastAction.bindingKey)
             let result = battle.hero.timingBar?.getTimingResult(time: lastAction.timing)
             lastAction.result = result!
             lastAction.swipeEffect = self

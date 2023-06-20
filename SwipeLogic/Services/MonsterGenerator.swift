@@ -23,15 +23,16 @@ class MonsterGenerator{
         switch self.difficulty {
         case .easy:
             enemyHealth = 50
-            enemyDamage = 5
-            enemyDefense = 5
+            enemyDamage = 2
+            enemyDefense = 2
         case .medium:
             enemyHealth = 100
-            enemyDamage = 10
-            enemyDefense  = 10
+            enemyDamage = 5
+            enemyDefense  = 5
         case .hard:
             enemyHealth = 150
-            enemyDamage = 30
+            enemyDefense = 10
+            enemyDamage = 10
         case .not_selected:
             enemyHealth = 0
             enemyDamage = 0

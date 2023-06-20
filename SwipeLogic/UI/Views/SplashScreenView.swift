@@ -20,17 +20,20 @@ struct SplashScreenView: View {
                 .scaledToFit()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .ignoresSafeArea(.all)
-            ProgressBar(progress: self.$progressValue)
-                .frame(width: UIScreen.main.bounds.width - 40, height: 20)
-                .offset(y: 350)
-                .padding(20.0).onAppear(){
-                    self.progressValue = 1.0
-                }.onAppear {
-                    AppState.shared.adventure = AdventureGenerator().perform()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                        AppState.shared.userState = .inMenu
+            VStack{
+                Spacer()
+                ProgressBar(progress: self.$progressValue)
+                    .frame(width: UIScreen.main.bounds.width - 40, height: 20)
+                    .padding(20.0)
+                    .onAppear {
+                        self.progressValue = 1.0
+                        AppState.shared.adventure = AdventureGenerator().perform()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                            AppState.shared.userState = .inMenu
+                        }
                     }
-                }
+            }
+            
         }
     }
 }

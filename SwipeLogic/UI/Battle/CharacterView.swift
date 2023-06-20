@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-
-
 struct CharacterView: View {
     
     @StateObject private var character: Character
-
+    
     
     init(character: Character) {
         _character = StateObject(wrappedValue: character);
@@ -21,22 +19,21 @@ struct CharacterView: View {
     
     var body: some View {
         GeometryReader { geometry in
-                    VStack {
-                        HealthBar(maxHP: character.healthPoints, currentHP: character.currentHealthPoints, isUser: type(of: character) == type(of: Basics().basicHero()))
-                            .frame(height: geometry.size.height * 0.1)
-                            .padding(.horizontal, geometry.size.width * 0.20)
-                        ZStack(alignment: .bottom){
-                            ShadowView(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 0.1)
-                            Image(character.name)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.horizontal, geometry.size.width * 0.20)
-                                .frame(height: geometry.size.height * 0.7)
-                        }
-                        
-                    }
-                    .frame(maxHeight: .infinity, alignment: .bottom) 
+            VStack {
+                HealthBar(maxHP: character.healthPoints, currentHP: character.currentHealthPoints, isUser: type(of: character) == type(of: Basics().basicHero()))
+                    .frame(height: geometry.size.height * 0.1)
+                    .padding(.horizontal, geometry.size.width * 0.20)
+                ZStack(alignment: .bottom){
+                    ShadowView(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 0.1)
+                    Image(character.name)
+                                                   .resizable()
+                                                   .aspectRatio(contentMode: .fit)
+                                                   .padding(.horizontal, geometry.size.width * 0.20)
+                                                   .frame(height: geometry.size.height * 0.7)
                 }
+            }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+        }
     }
 }
 

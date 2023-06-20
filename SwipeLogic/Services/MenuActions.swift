@@ -77,12 +77,12 @@
         }
         
         func selectOptionsAction()->[SwipeAction]{
-            let swipeActionRight = SwipeAction(type: .other, image: "flagFR", text: "french") {param in
+            let swipeActionRight = SwipeAction(type: .other, image: "flagFR", text: "FR") {param in
                 AppState.shared.language = .french
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionLeft = SwipeAction(type: .other, image: "flagJP", text: "japanese") {param in
+            let swipeActionLeft = SwipeAction(type: .other, image: "flagJP", text: "JP") {param in
                 AppState.shared.language = .japanese
                 AppState.shared.userState = .inMenu
             }
@@ -91,7 +91,7 @@
                 AppState.shared.userState = .inMenu
             }
             
-            let swipeActionDown = SwipeAction(type: .other, image: "flagEN", text: "english") {param in
+            let swipeActionDown = SwipeAction(type: .other, image: "flagEN", text: "EN") {param in
                 AppState.shared.language = .english
                 AppState.shared.userState = .inMenu
             }

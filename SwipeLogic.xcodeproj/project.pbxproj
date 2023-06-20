@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9ED1552A3F9A5A00652287 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED1542A3F9A5A00652287 /* Shadow.swift */; };
+		FA9ED1572A40271800652287 /* EffectApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED1562A40271800652287 /* EffectApplier.swift */; };
+		FA9ED1592A40292B00652287 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED1582A40292B00652287 /* ActionView.swift */; };
 		FAB031582A39929400A5D0B9 /* SwipeLogicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */; };
 		FAB0315A2A39929400A5D0B9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031592A39929400A5D0B9 /* MenuView.swift */; };
 		FAB0315C2A39929700A5D0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0315B2A39929700A5D0B9 /* Assets.xcassets */; };
@@ -22,7 +25,34 @@
 		FAB031A72A3A42EC00A5D0B9 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A62A3A42EC00A5D0B9 /* MenuActions.swift */; };
 		FAB031A92A3E4FA400A5D0B9 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */; };
 		FAB031AB2A3E4FC100A5D0B9 /* GeneratingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */; };
-		FAB031AF2A3E561900A5D0B9 /* DungeonMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */; };
+		FAB031B12A3ED8B500A5D0B9 /* BattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031B02A3ED8B500A5D0B9 /* BattleView.swift */; };
+		FAB031B32A3ED8D500A5D0B9 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031B22A3ED8D500A5D0B9 /* EventView.swift */; };
+		FAB031B52A3ED8FC00A5D0B9 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031B42A3ED8FC00A5D0B9 /* MarketView.swift */; };
+		FAB031B72A3EDAF200A5D0B9 /* TimingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031B62A3EDAF200A5D0B9 /* TimingBar.swift */; };
+		FAB031BD2A3EDB0300A5D0B9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031B82A3EDB0200A5D0B9 /* Character.swift */; };
+		FAB031BF2A3EDB0300A5D0B9 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031BA2A3EDB0300A5D0B9 /* Dungeon.swift */; };
+		FAB031C02A3EDB0300A5D0B9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031BB2A3EDB0300A5D0B9 /* Battle.swift */; };
+		FAB031C12A3EDB0300A5D0B9 /* Adventure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031BC2A3EDB0300A5D0B9 /* Adventure.swift */; };
+		FAB031C62A3EFCF700A5D0B9 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031C52A3EFCF700A5D0B9 /* Basics.swift */; };
+		FAB031C82A3EFFF800A5D0B9 /* SwipeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031C72A3EFFF800A5D0B9 /* SwipeEffect.swift */; };
+		FAB031CA2A3F564500A5D0B9 /* AdventureGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031C92A3F564500A5D0B9 /* AdventureGenerator.swift */; };
+		FAB031CE2A3F634E00A5D0B9 /* BattleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031CD2A3F634E00A5D0B9 /* BattleActions.swift */; };
+		FAB031D02A3F677000A5D0B9 /* MonsterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031CF2A3F677000A5D0B9 /* MonsterGenerator.swift */; };
+		FAB031D22A3F6CF200A5D0B9 /* BattleGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031D12A3F6CF200A5D0B9 /* BattleGenerator.swift */; };
+		FAB031D42A3F6E5E00A5D0B9 /* SwipeEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031D32A3F6E5E00A5D0B9 /* SwipeEffects.swift */; };
+		FAB031D62A3F71EB00A5D0B9 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031D52A3F71EB00A5D0B9 /* CharacterView.swift */; };
+		FAB031D82A3F732400A5D0B9 /* HealthBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031D72A3F732400A5D0B9 /* HealthBarView.swift */; };
+		FAB031E22A3F92DE00A5D0B9 /* TimingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB031E12A3F92DE00A5D0B9 /* TimingBarView.swift */; };
+		FAC146D42A40859700F4CC8F /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC146D32A40859700F4CC8F /* ProgressBar.swift */; };
+		FAC146D72A408B8000F4CC8F /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC146D62A408B8000F4CC8F /* Title.swift */; };
+		FAC146DF2A41955A00F4CC8F /* FinnCharacter.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAC146DE2A41955A00F4CC8F /* FinnCharacter.gif */; };
+		FAC146E22A41980500F4CC8F /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = FAC146E12A41980500F4CC8F /* SwiftyGif */; };
+		FAC146E42A419D6B00F4CC8F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC146E32A419D6B00F4CC8F /* GifImage.swift */; };
+		FACA5C3B2A41A01F0025AAEE /* PenguinCharacter.gif in Resources */ = {isa = PBXBuildFile; fileRef = FACA5C3A2A41A01F0025AAEE /* PenguinCharacter.gif */; };
+		FACA5C3F2A41B6320025AAEE /* RewardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA5C3E2A41B6320025AAEE /* RewardGenerator.swift */; };
+		FACA5C452A41D2E40025AAEE /* DungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA5C442A41D2E40025AAEE /* DungeonView.swift */; };
+		FACA5C472A41D3300025AAEE /* DungeonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA5C462A41D3300025AAEE /* DungeonMap.swift */; };
+		FACA5C492A41D62D0025AAEE /* DungeonMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA5C482A41D62D0025AAEE /* DungeonMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA9ED1542A3F9A5A00652287 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		FA9ED1562A40271800652287 /* EffectApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectApplier.swift; sourceTree = "<group>"; };
+		FA9ED1582A40292B00652287 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		FAB031542A39929400A5D0B9 /* SwipeLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeLogicApp.swift; sourceTree = "<group>"; };
 		FAB031592A39929400A5D0B9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -64,7 +97,34 @@
 		FAB031A62A3A42EC00A5D0B9 /* MenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
 		FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratingScreenView.swift; sourceTree = "<group>"; };
-		FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DungeonMapView.swift; sourceTree = "<group>"; };
+		FAB031B02A3ED8B500A5D0B9 /* BattleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
+		FAB031B22A3ED8D500A5D0B9 /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		FAB031B42A3ED8FC00A5D0B9 /* MarketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
+		FAB031B62A3EDAF200A5D0B9 /* TimingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimingBar.swift; path = "../../../SwipeTime/Swipe Time/Classes/TimingBar.swift"; sourceTree = "<group>"; };
+		FAB031B82A3EDB0200A5D0B9 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = "../../../SwipeTime/Swipe Time/Classes/Character.swift"; sourceTree = "<group>"; };
+		FAB031BA2A3EDB0300A5D0B9 /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dungeon.swift; path = "../../../SwipeTime/Swipe Time/Classes/Dungeon.swift"; sourceTree = "<group>"; };
+		FAB031BB2A3EDB0300A5D0B9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Battle.swift; path = "../../../SwipeTime/Swipe Time/Classes/Battle.swift"; sourceTree = "<group>"; };
+		FAB031BC2A3EDB0300A5D0B9 /* Adventure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Adventure.swift; path = "../../../SwipeTime/Swipe Time/Classes/Adventure.swift"; sourceTree = "<group>"; };
+		FAB031C52A3EFCF700A5D0B9 /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		FAB031C72A3EFFF800A5D0B9 /* SwipeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeEffect.swift; sourceTree = "<group>"; };
+		FAB031C92A3F564500A5D0B9 /* AdventureGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureGenerator.swift; sourceTree = "<group>"; };
+		FAB031CD2A3F634E00A5D0B9 /* BattleActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleActions.swift; sourceTree = "<group>"; };
+		FAB031CF2A3F677000A5D0B9 /* MonsterGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterGenerator.swift; sourceTree = "<group>"; };
+		FAB031D12A3F6CF200A5D0B9 /* BattleGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGenerator.swift; sourceTree = "<group>"; };
+		FAB031D32A3F6E5E00A5D0B9 /* SwipeEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeEffects.swift; sourceTree = "<group>"; };
+		FAB031D52A3F71EB00A5D0B9 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		FAB031D72A3F732400A5D0B9 /* HealthBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarView.swift; sourceTree = "<group>"; };
+		FAB031E02A3F80F300A5D0B9 /* Finn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Finn.gif; sourceTree = "<group>"; };
+		FAB031E12A3F92DE00A5D0B9 /* TimingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingBarView.swift; sourceTree = "<group>"; };
+		FAC146D32A40859700F4CC8F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		FAC146D62A408B8000F4CC8F /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Title.swift; path = SwipeLogic/UI/Elements/Title.swift; sourceTree = SOURCE_ROOT; };
+		FAC146DE2A41955A00F4CC8F /* FinnCharacter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = FinnCharacter.gif; sourceTree = "<group>"; };
+		FAC146E32A419D6B00F4CC8F /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		FACA5C3A2A41A01F0025AAEE /* PenguinCharacter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = PenguinCharacter.gif; sourceTree = "<group>"; };
+		FACA5C3E2A41B6320025AAEE /* RewardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardGenerator.swift; sourceTree = "<group>"; };
+		FACA5C442A41D2E40025AAEE /* DungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonView.swift; sourceTree = "<group>"; };
+		FACA5C462A41D3300025AAEE /* DungeonMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonMap.swift; sourceTree = "<group>"; };
+		FACA5C482A41D62D0025AAEE /* DungeonMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC146E22A41980500F4CC8F /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,12 +177,17 @@
 			isa = PBXGroup;
 			children = (
 				FAB031A42A3A406D00A5D0B9 /* GlobalVariables.swift */,
+				FAB031C52A3EFCF700A5D0B9 /* Basics.swift */,
+				FAB031D32A3F6E5E00A5D0B9 /* SwipeEffects.swift */,
+				FACA5C3A2A41A01F0025AAEE /* PenguinCharacter.gif */,
+				FAC146DE2A41955A00F4CC8F /* FinnCharacter.gif */,
 				FAB0318C2A39AD7E00A5D0B9 /* Classes */,
 				FAB0318A2A39A02F00A5D0B9 /* UI */,
 				FAB031832A39933600A5D0B9 /* Services */,
 				FAB031572A39929400A5D0B9 /* SwipeLogicApp.swift */,
 				FAB0315B2A39929700A5D0B9 /* Assets.xcassets */,
 				FAB031602A39929700A5D0B9 /* Info.plist */,
+				FAB031E02A3F80F300A5D0B9 /* Finn.gif */,
 				FAB0315D2A39929700A5D0B9 /* Preview Content */,
 			);
 			path = SwipeLogic;
@@ -156,7 +222,14 @@
 		FAB031832A39933600A5D0B9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FAC146E32A419D6B00F4CC8F /* GifImage.swift */,
 				FAB031A62A3A42EC00A5D0B9 /* MenuActions.swift */,
+				FAB031CD2A3F634E00A5D0B9 /* BattleActions.swift */,
+				FAB031C92A3F564500A5D0B9 /* AdventureGenerator.swift */,
+				FAB031CF2A3F677000A5D0B9 /* MonsterGenerator.swift */,
+				FAB031D12A3F6CF200A5D0B9 /* BattleGenerator.swift */,
+				FA9ED1562A40271800652287 /* EffectApplier.swift */,
+				FACA5C3E2A41B6320025AAEE /* RewardGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,13 +237,9 @@
 		FAB0318A2A39A02F00A5D0B9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FAB031592A39929400A5D0B9 /* MenuView.swift */,
-				FAB031862A3998B700A5D0B9 /* SwipePadView.swift */,
-				FAB031A02A39BE3F00A5D0B9 /* SwipeActionView.swift */,
-				FAB031A22A39EB7800A5D0B9 /* SwiperView.swift */,
-				FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */,
-				FAB031AE2A3E561900A5D0B9 /* DungeonMapView.swift */,
-				FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */,
+				FAC146D52A408B2E00F4CC8F /* Views */,
+				FAC146D22A40856F00F4CC8F /* Elements */,
+				FAB031C22A3EDF4100A5D0B9 /* Battle */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -178,10 +247,56 @@
 		FAB0318C2A39AD7E00A5D0B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAB031BC2A3EDB0300A5D0B9 /* Adventure.swift */,
+				FAB031BB2A3EDB0300A5D0B9 /* Battle.swift */,
+				FAB031B82A3EDB0200A5D0B9 /* Character.swift */,
+				FAB031BA2A3EDB0300A5D0B9 /* Dungeon.swift */,
+				FACA5C462A41D3300025AAEE /* DungeonMap.swift */,
+				FAB031B62A3EDAF200A5D0B9 /* TimingBar.swift */,
 				FAB031842A39935600A5D0B9 /* SwipePad.swift */,
 				FAB0318D2A39AD9E00A5D0B9 /* SwipeAction.swift */,
+				FAB031C72A3EFFF800A5D0B9 /* SwipeEffect.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		FAB031C22A3EDF4100A5D0B9 /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				FAB031B02A3ED8B500A5D0B9 /* BattleView.swift */,
+				FAC146D62A408B8000F4CC8F /* Title.swift */,
+				FA9ED1542A3F9A5A00652287 /* Shadow.swift */,
+				FAB031D52A3F71EB00A5D0B9 /* CharacterView.swift */,
+				FA9ED1582A40292B00652287 /* ActionView.swift */,
+				FAB031D72A3F732400A5D0B9 /* HealthBarView.swift */,
+				FAB031E12A3F92DE00A5D0B9 /* TimingBarView.swift */,
+			);
+			path = Battle;
+			sourceTree = "<group>";
+		};
+		FAC146D22A40856F00F4CC8F /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				FAB031A22A39EB7800A5D0B9 /* SwiperView.swift */,
+				FAB031862A3998B700A5D0B9 /* SwipePadView.swift */,
+				FAB031A02A39BE3F00A5D0B9 /* SwipeActionView.swift */,
+				FAC146D32A40859700F4CC8F /* ProgressBar.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		FAC146D52A408B2E00F4CC8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB031592A39929400A5D0B9 /* MenuView.swift */,
+				FAB031A82A3E4FA400A5D0B9 /* SplashScreenView.swift */,
+				FAB031B42A3ED8FC00A5D0B9 /* MarketView.swift */,
+				FACA5C442A41D2E40025AAEE /* DungeonView.swift */,
+				FACA5C482A41D62D0025AAEE /* DungeonMapView.swift */,
+				FAB031B22A3ED8D500A5D0B9 /* EventView.swift */,
+				FAB031AA2A3E4FC100A5D0B9 /* GeneratingScreenView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +315,9 @@
 			dependencies = (
 			);
 			name = SwipeLogic;
+			packageProductDependencies = (
+				FAC146E12A41980500F4CC8F /* SwiftyGif */,
+			);
 			productName = SwipeLogic;
 			productReference = FAB031542A39929400A5D0B9 /* SwipeLogic.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +389,9 @@
 				Base,
 			);
 			mainGroup = FAB0314B2A39929400A5D0B9;
+			packageReferences = (
+				FAC146E02A41980500F4CC8F /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+			);
 			productRefGroup = FAB031552A39929400A5D0B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,8 +408,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC146DF2A41955A00F4CC8F /* FinnCharacter.gif in Resources */,
 				FAB0315F2A39929700A5D0B9 /* Preview Assets.xcassets in Resources */,
 				FAB0315C2A39929700A5D0B9 /* Assets.xcassets in Resources */,
+				FACA5C3B2A41A01F0025AAEE /* PenguinCharacter.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,18 +436,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB031CA2A3F564500A5D0B9 /* AdventureGenerator.swift in Sources */,
+				FAB031D02A3F677000A5D0B9 /* MonsterGenerator.swift in Sources */,
 				FAB031AB2A3E4FC100A5D0B9 /* GeneratingScreenView.swift in Sources */,
+				FAB031C82A3EFFF800A5D0B9 /* SwipeEffect.swift in Sources */,
+				FAB031D42A3F6E5E00A5D0B9 /* SwipeEffects.swift in Sources */,
+				FAB031D82A3F732400A5D0B9 /* HealthBarView.swift in Sources */,
+				FAB031B32A3ED8D500A5D0B9 /* EventView.swift in Sources */,
+				FA9ED1572A40271800652287 /* EffectApplier.swift in Sources */,
+				FAB031D62A3F71EB00A5D0B9 /* CharacterView.swift in Sources */,
 				FAB031A92A3E4FA400A5D0B9 /* SplashScreenView.swift in Sources */,
+				FAB031C02A3EDB0300A5D0B9 /* Battle.swift in Sources */,
 				FAB0315A2A39929400A5D0B9 /* MenuView.swift in Sources */,
+				FAC146D42A40859700F4CC8F /* ProgressBar.swift in Sources */,
 				FAB031872A3998B700A5D0B9 /* SwipePadView.swift in Sources */,
+				FACA5C492A41D62D0025AAEE /* DungeonMapView.swift in Sources */,
+				FA9ED1552A3F9A5A00652287 /* Shadow.swift in Sources */,
 				FAB031852A39935600A5D0B9 /* SwipePad.swift in Sources */,
+				FAB031BF2A3EDB0300A5D0B9 /* Dungeon.swift in Sources */,
 				FAB031A32A39EB7800A5D0B9 /* SwiperView.swift in Sources */,
+				FAB031CE2A3F634E00A5D0B9 /* BattleActions.swift in Sources */,
+				FACA5C452A41D2E40025AAEE /* DungeonView.swift in Sources */,
+				FACA5C3F2A41B6320025AAEE /* RewardGenerator.swift in Sources */,
+				FACA5C472A41D3300025AAEE /* DungeonMap.swift in Sources */,
+				FAB031E22A3F92DE00A5D0B9 /* TimingBarView.swift in Sources */,
+				FAB031B72A3EDAF200A5D0B9 /* TimingBar.swift in Sources */,
+				FAB031C12A3EDB0300A5D0B9 /* Adventure.swift in Sources */,
+				FA9ED1592A40292B00652287 /* ActionView.swift in Sources */,
 				FAB031582A39929400A5D0B9 /* SwipeLogicApp.swift in Sources */,
 				FAB031A52A3A406D00A5D0B9 /* GlobalVariables.swift in Sources */,
-				FAB031AF2A3E561900A5D0B9 /* DungeonMapView.swift in Sources */,
 				FAB0318E2A39AD9F00A5D0B9 /* SwipeAction.swift in Sources */,
+				FAC146D72A408B8000F4CC8F /* Title.swift in Sources */,
+				FAB031C62A3EFCF700A5D0B9 /* Basics.swift in Sources */,
+				FAB031B52A3ED8FC00A5D0B9 /* MarketView.swift in Sources */,
+				FAB031B12A3ED8B500A5D0B9 /* BattleView.swift in Sources */,
 				FAB031A72A3A42EC00A5D0B9 /* MenuActions.swift in Sources */,
+				FAB031BD2A3EDB0300A5D0B9 /* Character.swift in Sources */,
 				FAB031A12A39BE3F00A5D0B9 /* SwipeActionView.swift in Sources */,
+				FAC146E42A419D6B00F4CC8F /* GifImage.swift in Sources */,
+				FAB031D22A3F6CF200A5D0B9 /* BattleGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +788,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAC146E02A41980500F4CC8F /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAC146E12A41980500F4CC8F /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC146E02A41980500F4CC8F /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAB0314C2A39929400A5D0B9 /* Project object */;
 }

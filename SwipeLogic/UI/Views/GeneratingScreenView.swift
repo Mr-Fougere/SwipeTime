@@ -15,21 +15,23 @@ struct GeneratinScreenView: View {
         ZStack{
             Image("Generation")
                 .resizable()
-                .scaledToFit()
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .scaledToFill()
                 .ignoresSafeArea(.all)
-            ProgressBar(progress: self.$progressValue)
-                .frame(width: UIScreen.main.bounds.width - 40, height: 20)
-                .offset(y: 350)
-                .padding(20.0).onAppear(){
-                    self.progressValue = 1.0
-                }.onAppear {
-                    AppState.shared.adventure = AdventureGenerator().perform()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                        AppState.shared.userState = .inBattle
+            VStack{
+                TitleView(text: "New adventure", type: 3)
+                Spacer()
+                ProgressBar(progress: self.$progressValue)
+                    .frame(width: UIScreen.main.bounds.width - 40, height: 20)
+                    .padding(20.0)
+                    }.onAppear {
+                        self.progressValue = 1.0
+                        AppState.shared.adventure = AdventureGenerator().perform()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                            AppState.shared.userState = .onDungeonMap
+                        }
                     }
-                }
-        }
+            }
+            
     }
 }
 

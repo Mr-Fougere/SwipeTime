@@ -16,10 +16,10 @@ class Basics {
     
     public let enemySpecialEffect: SwipeEffect = SwipeEffect(target: .opponent,type: .special, affectedStat: .defense, referenceStat: .one, value: -1)
     
-    public lazy var basicSwipeAttack: SwipeAction = SwipeAction(type: .attack, image: "basic_sword", text: "Deal 1x attack") { param in self.basicAtackEffect.updateAction(mulitplier: param, battle: AppState.shared.battle!)
+    public lazy var basicSwipeAttack: SwipeAction = SwipeAction(type: .attack, image: "basic_sword", text: "Attack") { param in self.basicAtackEffect.updateAction(mulitplier: param, battle: AppState.shared.battle!)
     }
 
-    public lazy var basicSwipeDefense: SwipeAction = SwipeAction(type: .defense, image: "basic_defense", text: "Protect 5 damage") {
+    public lazy var basicSwipeDefense: SwipeAction = SwipeAction(type: .defense, image: "basic_shield", text: "Protect") {
         param in self.basicDefenseEffect.updateAction(mulitplier: param,battle: AppState.shared.battle!)
     }
     
@@ -43,8 +43,20 @@ class Basics {
         return TimingBar(perfectTiming: 5, greatTiming: 10, goodTiming: 20, combo: 0)
     }
     
+    func emptySpecial()->SwipeAction{
+        return SwipeAction(type: .other, image: "no_special", text: "") {_ in
+            print("No action")
+        }
+    }
+    
+    func emptyOther()->SwipeAction{
+        return SwipeAction(type: .other, image: "no_other", text: "") {_ in
+            print("No action")
+        }
+    }
+    
     func emptySwipeAction()->SwipeAction{
-        return SwipeAction(type: .other, image: "No action", text: "No action") {_ in 
+        return SwipeAction(type: .other, image: "no_action", text: "") {_ in
             print("No action")
         }
     }

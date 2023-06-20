@@ -1,22 +1,23 @@
 //
-//  SplashScreen.swift
+//  DungeonMapView.swift
 //  SwipeLogic
 //
-//  Created by Alexandre Gaubert on 17/06/2023.
+//  Created by Alexandre Gaubert on 20/06/2023.
 //
 
 import SwiftUI
 
-struct DungeonMapView: View {
+struct DungeonView: View {
+    let donjonMap = AppState.shared.adventure?.currentDungeon
+    init() {
+        donjonMap!.displayPath()
+    }
+    
     var body: some View {
-        VStack{
-            Color(.orange)
+        VStack {
+            DungeonMapView(donjonMap: donjonMap!)
         }
+        .padding()
     }
 }
 
-struct DungeonMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        DungeonMapView()
-    }
-}

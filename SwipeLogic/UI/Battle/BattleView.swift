@@ -9,10 +9,6 @@ import SwiftUI
 struct BattleView: View {
     var adventure: Adventure = AppState.shared.adventure!
     
-    var swipePad: SwipePad {
-        return BattleActions(actions: adventure.hero.swipeActions).create()
-    }
-
         @StateObject var battle: Battle
         @StateObject var hero: Hero
         @StateObject var monster: Monster
@@ -35,6 +31,34 @@ struct BattleView: View {
             }
         }
     
+    var finishedBattle: BattleResult{
+        if  monster.currentHealthPoints <= 0{
+            return .win
+        }else if hero.currentHealthPoints <= 0{
+            return .lose
+        }
+        return .in_progress
+    }
+
+    
+    var swipePad: SwipePad {
+        if finishedBattle != .in_progress {
+            return RewardGenerator(hero: hero,result: finishedBattle).perform()
+        }
+        return BattleActions(actions: adventure.hero.swipeActions).create()
+    }
+    
+    var titleText: String {
+        switch finishedBattle {
+        case .in_progress:
+            return "Battle"
+        case .lose:
+            return "You lose"
+        case .win:
+            return "You win"
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color(adventure.currentDungeon.color)
@@ -46,12 +70,12 @@ struct BattleView: View {
                             .scaledToFill()
                             .frame(width: geometry.size.width, height: geometry.size.height)
                         VStack{
-                            TitleView(text: "Battle", type: 3).frame(height: geometry.size.height * 0.15)
+                            TitleView(text: titleText, type: 3).frame(height: geometry.size.height * 0.15)
                             HStack() {
                                 CharacterView(character: hero)
-                                CharacterView(character: monster)
+                                monster.currentHealthPoints > 0 ? CharacterView(character: monster) : nil
                             }.frame(height: geometry.size.height * 0.6)
-                            TimingBarView(battle: battle).frame(height: geometry.size.height * 0.2)
+                            finishedBattle == .in_progress ? TimingBarView(battle: battle).frame(height: geometry.size.height * 0.2) : nil
                         }
                     }
                 }

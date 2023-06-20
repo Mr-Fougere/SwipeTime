@@ -36,8 +36,8 @@
             return SwipePad(
                 rightAction: swipeActions["rightAction"] ?? Basics().emptySwipeAction(),
                 leftAction: swipeActions["leftAction"] ?? Basics().emptySwipeAction(),
-                upAction: swipeActions["upAction"] ?? Basics().emptySwipeAction(),
-                downAction: swipeActions["downAction"] ?? Basics().emptySwipeAction()
+                upAction: swipeActions["upAction"] ?? Basics().emptySpecial(),
+                downAction: swipeActions["downAction"] ?? Basics().emptyOther()
             )
         }
     }

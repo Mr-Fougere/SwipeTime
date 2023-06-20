@@ -16,7 +16,7 @@ class AdventureGenerator{
     init() {
         self.hero = Basics().basicHero()
         self.difficulty = AppState.shared.difficulty
-        self.dungeonMap = DungeonMap(name: .forest, dungeonCases: [], level: 1, width: 10, height: 10)
+        self.dungeonMap = DungeonMap(name: .forest, level: 1, width: 10, height: 10, hero: hero)
     }
     
     func perform() -> Adventure {

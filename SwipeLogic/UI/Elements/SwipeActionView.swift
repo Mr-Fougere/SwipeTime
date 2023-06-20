@@ -20,18 +20,22 @@
         
         var body: some View {
             ZStack {
-                Color(.green)
-                /*
                 Image(swipeAction.image)
                     .resizable()
-                    .frame(width: width, height: height)
-                    .scaledToFit()
-                    .opacity(0.7)
-                    .clipped()
-                 */
-     Text(swipeAction.text)
+                VStack{
+                    Spacer()
+                    Text(swipeAction.text)
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundColor(.black)
+                            .kerning(1)
+                            .shadow(radius: 10)
+                    swipeAction.type == .attack || swipeAction.type  == .defense ? nil : Spacer()
+                }
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.white, lineWidth: swipeAction.text != "" ?  5 : 0)
+                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 0)
             }
-            
         }
     }
     
