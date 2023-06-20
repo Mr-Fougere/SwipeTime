@@ -24,7 +24,7 @@ enum CellType: CaseIterable, CustomStringConvertible {
         case .boss: return "Boss"
         case .camp: return "camp"
         case .empty: return "emptyImage"
-        case .other: return "aléatoire"
+        case .other: return "aleatoire"
         case .depart: return "depart"
         case .path: return "joueur"
         }
@@ -149,7 +149,7 @@ class DungeonMap: ObservableObject {
         while currentPos != end {
             let cell = getCell(at: currentPos)!
             cell.type = CellType.randomForPath
-            cell.clear = false // Set clear to true for the path cells
+            cell.clear = true // Set clear to true for the path cells
             path.append(cell) // add cell to path
             
             // randomly move right or up
@@ -166,8 +166,8 @@ class DungeonMap: ObservableObject {
         
         // set the end cell to be a random type too
         let endCell = getCell(at: end)!
-        endCell.type = CellType.randomForPath
-        endCell.clear = false // Set clear to true for the end cell
+        endCell.type = CellType.boss
+        endCell.clear = true // Set clear to true for the end cell
         path.append(endCell) // add end cell to path
     }
     
@@ -182,6 +182,9 @@ class DungeonMap: ObservableObject {
         if let newCell = getCell(at: newCoordinate), newCell.clear {
             hero.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+            if newCell.type == .battle {
+                AppState.shared.userState = .inBattle
+            }
         }
         self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
         
@@ -194,6 +197,9 @@ class DungeonMap: ObservableObject {
         if let newCell = getCell(at: newCoordinate), newCell.clear {
             hero.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+            if newCell.type == .battle {
+                AppState.shared.userState = .inBattle
+            }
         }
         self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
     }
@@ -205,6 +211,9 @@ class DungeonMap: ObservableObject {
         if let newCell = getCell(at: newCoordinate), newCell.clear {
             hero.coordinate = newCoordinate
             print("New position: (\(newCoordinate.x), \(newCoordinate.y))")
+            if newCell.type == .battle {
+                AppState.shared.userState = .inBattle
+            }
         }
         self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
     }
@@ -216,6 +225,9 @@ class DungeonMap: ObservableObject {
         if let newCell = getCell(at: newCoordinate), newCell.clear {
             hero.coordinate = newCoordinate
             print("New position: (\(hero.coordinate.x), \(hero.coordinate.y))")
+            if newCell.type == .battle {
+                AppState.shared.userState = .inBattle
+            }
         }
         self.objectWillChange.send() // Ajouter cet appel pour signaler le changement
     }

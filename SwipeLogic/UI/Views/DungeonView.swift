@@ -16,10 +16,10 @@ struct DungeonMapView: View{
         let swipeLeft:SwipeAction = SwipeAction(type: .other, image: "left", text: "left", action: { _ in donjonMap.movePlayerLeft();
                                                     self.donjonMap.objectWillChange.send();
                                                     self.updatePlayerImage()})
-        let swipeUp:SwipeAction = SwipeAction(type: .other, image: "up", text: "up", action: { _ in donjonMap.movePlayerUp();
+        let swipeUp:SwipeAction = SwipeAction(type: .other, image: "up", text: "up", action: { _ in donjonMap.movePlayerDown();
                                                     self.donjonMap.objectWillChange.send();
                                                     self.updatePlayerImage()})
-        let swipeDown:SwipeAction = SwipeAction(type: .other, image: "down", text: "down", action: { _ in donjonMap.movePlayerDown();
+        let swipeDown:SwipeAction = SwipeAction(type: .other, image: "down", text: "down", action: { _ in donjonMap.movePlayerUp();
                                                     self.donjonMap.objectWillChange.send();
                                                     self.updatePlayerImage()})
         return SwipePad(rightAction: swipeRight, leftAction: swipeLeft, upAction: swipeUp, downAction: swipeDown)
@@ -58,8 +58,7 @@ struct DungeonMapView: View{
                         .padding(.top) // Adjust the top padding as needed
 
                         SwiperView(swipePad: swipePad)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
-                            .padding(.bottom, 40) // Adjust the bottom padding as needed
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)// Adjust the bottom padding as needed
                     }
                 }
                 .onAppear {

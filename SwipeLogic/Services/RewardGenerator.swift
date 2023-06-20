@@ -26,7 +26,7 @@ class RewardGenerator{
         var upAction: SwipeAction
         var rightAction: SwipeAction
         if self.result == .win {
-            downAction = SwipeAction(type: .other, image: "return", text: "Go", action: {_ in self.appState.userState = .onDungeonMap })
+            downAction = SwipeAction(type: .other, image: "return", text: "Go", action: {_ in self.appState.battle = nil;self.appState.userState = .onDungeonMap })
             leftAction = SwipeAction(type: .other, image: "gold", text: "+100 Gold", action: {_ in self.appState.adventure?.hero.gold += 100 })
             upAction  = SwipeAction(type: .other, image: "no_action_h", text: "", action: {_ in })
             rightAction = SwipeAction(type: .other, image: "no_action_v", text: "", action: {_ in  })

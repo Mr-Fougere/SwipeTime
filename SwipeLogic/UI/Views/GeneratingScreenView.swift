@@ -27,7 +27,7 @@ struct GeneratinScreenView: View {
                         self.progressValue = 1.0
                         AppState.shared.adventure = AdventureGenerator().perform()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                            AppState.shared.userState = .inBattle
+                            AppState.shared.userState = .onDungeonMap
                         }
                     }
             }
