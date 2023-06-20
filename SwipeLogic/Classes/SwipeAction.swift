@@ -53,4 +53,3 @@ class SwipeAction :Hashable {
             hasher.combine(text)
         }
 }
-
