@@ -54,7 +54,7 @@ struct DungeonMapView: View{
                                 }
                             }
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding(.top) // Adjust the top padding as needed
 
                         SwiperView(swipePad: swipePad)
